@@ -4,11 +4,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Roman {
+	
+	private Map<Integer, String> arabicToRomanMap;
+	
+	public Roman() {
+		arabicToRomanMap = new HashMap<Integer, String>();
+		arabicToRomanMap.put(4, "IV");
+	}
 
 	public String convert(int arabicNumber) {
-		Map<Integer, String> arabicToRomanMap = new HashMap<Integer, String>();
-		arabicToRomanMap.put(4, "IV");
-
 		String romanResult = "";
 		for (int start = 0; start < arabicNumber; start++) {
 			if (arabicToRomanMap.containsKey(arabicNumber)) {
