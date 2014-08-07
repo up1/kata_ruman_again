@@ -13,5 +13,11 @@ public class RomanNumbericNoIfTest {
 		assertEquals("II", roman.convert(2));
 		assertEquals("III", roman.convert(3));
 	}
+	
+	@Test
+	public void numberFourShoudReturnIV() {
+		Roman roman = new Roman();
+		assertEquals("IV", roman.convert(4));
+	}
 
 }
