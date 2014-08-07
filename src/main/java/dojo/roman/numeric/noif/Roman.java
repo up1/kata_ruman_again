@@ -6,6 +6,7 @@ import java.util.Map;
 public class Roman {
 
 	private Map<Integer, String> arabicToRomanMap;
+	private int[] datas = { 5, 4, 1 };
 
 	public Roman() {
 		arabicToRomanMap = new HashMap<Integer, String>();
@@ -25,7 +26,6 @@ public class Roman {
 	}
 
 	private int findArabicNumber(int arabicNumber) {
-		int[] datas = { 5, 4, 1 };
 		for (Integer arabic : datas) {
 			if (arabicNumber >= arabic) {
 				return arabic;
