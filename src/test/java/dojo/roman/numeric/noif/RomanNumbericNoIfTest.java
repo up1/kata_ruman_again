@@ -5,10 +5,11 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class RomanNumbericNoIfTest {
+	
+	Roman roman = new Roman();
 
 	@Test
 	public void numberLessOrEqualThanThreeShouldShowAllInI() {
-		Roman roman = new Roman();
 		assertEquals("I", roman.convert(1));
 		assertEquals("II", roman.convert(2));
 		assertEquals("III", roman.convert(3));
@@ -16,7 +17,6 @@ public class RomanNumbericNoIfTest {
 	
 	@Test
 	public void numberFourShoudReturnIV() {
-		Roman roman = new Roman();
 		assertEquals("IV", roman.convert(4));
 	}
 
