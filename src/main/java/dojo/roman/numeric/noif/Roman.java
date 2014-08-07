@@ -4,26 +4,34 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Roman {
-	
+
 	private Map<Integer, String> arabicToRomanMap;
-	
+
 	public Roman() {
 		arabicToRomanMap = new HashMap<Integer, String>();
-		arabicToRomanMap.put(4, "IV");
 		arabicToRomanMap.put(5, "V");
+		arabicToRomanMap.put(4, "IV");
+		arabicToRomanMap.put(1, "I");
 	}
 
 	public String convert(int arabicNumber) {
 		String romanResult = "";
-		for (int start = 0; start < arabicNumber; start++) {
-			if (arabicToRomanMap.containsKey(arabicNumber)) {
-				romanResult += arabicToRomanMap.get(arabicNumber);
-				arabicNumber -= arabicNumber;
-			} else {
-				romanResult += "I";
-			}
+		int foundArabicNumber = 0;
+		while ((foundArabicNumber = findArabicNumber(arabicNumber)) != 0) {
+			romanResult += arabicToRomanMap.get(foundArabicNumber);
+			arabicNumber -= foundArabicNumber;
 		}
 		return romanResult;
+	}
+
+	private int findArabicNumber(int arabicNumber) {
+		int[] datas = { 5, 4, 1 };
+		for (Integer arabic : datas) {
+			if (arabicNumber >= arabic) {
+				return arabic;
+			}
+		}
+		return 0;
 	}
 
 }
