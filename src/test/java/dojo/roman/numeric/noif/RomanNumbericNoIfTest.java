@@ -11,7 +11,7 @@ public class RomanNumbericNoIfTest {
 		Roman roman = new Roman();
 		assertEquals("I", roman.convert(1));
 		assertEquals("II", roman.convert(2));
-		assertEquals("II", roman.convert(3));
+		assertEquals("III", roman.convert(3));
 	}
 
 }
