@@ -45,5 +45,11 @@ public class RomanNumbericNoIfTest {
 		assertEquals("D", roman.convert(500));
 		assertEquals("M", roman.convert(1000));
 	}
-
+	
+	@Test
+	public void specialcase() {
+		assertEquals("MCMXXXIV", roman.convert(1934));
+		assertEquals("MMXIV", roman.convert(2014));
+	}
+	
 }

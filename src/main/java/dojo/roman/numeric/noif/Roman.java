@@ -6,11 +6,12 @@ import java.util.Map;
 public class Roman {
 
 	private Map<Integer, String> arabicToRomanMap;
-	private int[] datas = { 1000, 500, 100, 50, 10, 9, 5, 4, 1 };
+	private int[] datas = { 1000, 900, 500, 100, 50, 10, 9, 5, 4, 1 };
 
 	public Roman() {
 		arabicToRomanMap = new HashMap<Integer, String>();
 		arabicToRomanMap.put(1000, "M");
+		arabicToRomanMap.put(900, "CM");
 		arabicToRomanMap.put(500, "D");
 		arabicToRomanMap.put(100, "C");
 		arabicToRomanMap.put(50, "L");
