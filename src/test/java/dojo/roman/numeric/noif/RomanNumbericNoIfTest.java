@@ -36,5 +36,14 @@ public class RomanNumbericNoIfTest {
 	public void numberNineShoudReturnIX() {
 		assertEquals("IX", roman.convert(9));
 	}
+	
+	@Test
+	public void anothercase() {
+		assertEquals("X", roman.convert(10));
+		assertEquals("L", roman.convert(50));
+		assertEquals("C", roman.convert(100));
+		assertEquals("D", roman.convert(500));
+		assertEquals("M", roman.convert(1000));
+	}
 
 }
