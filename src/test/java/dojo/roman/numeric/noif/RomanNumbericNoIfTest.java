@@ -24,5 +24,12 @@ public class RomanNumbericNoIfTest {
 	public void numberFiveShoudReturnIV() {
 		assertEquals("V", roman.convert(5));
 	}
+	
+	@Test
+	public void numberLessOrEqualThanEightShouldShowInFormatVI() {
+		assertEquals("VI", roman.convert(6));
+		assertEquals("VII", roman.convert(7));
+		assertEquals("VIII", roman.convert(8));
+	}
 
 }
