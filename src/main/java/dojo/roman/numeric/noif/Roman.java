@@ -10,6 +10,7 @@ public class Roman {
 	public Roman() {
 		arabicToRomanMap = new HashMap<Integer, String>();
 		arabicToRomanMap.put(4, "IV");
+		arabicToRomanMap.put(5, "V");
 	}
 
 	public String convert(int arabicNumber) {
